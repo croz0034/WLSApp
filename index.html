@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Tourney</title>
+</head>
+
+<body>
+    <!--           Banner-->
+    <div class="Banner">
+        <img class="Burger" src="img/BurgerBar.svg" />
+        <p class="Title"> Register </p>
+    </div>
+    <!--          Navigation-->
+    <nav>
+        <a class="Players">Players</a>
+        <a class="Brackets">Brackets</a>
+        <h4> Tournaments</h4>
+        <div id="Tourney"></div>
+    </nav>
+    <!--    Setup Pages -->
+
+
+    <div class="Page" id="Players">
+        <p class="AddButton" id="PlayerAdd"> + </p>
+
+    </div>
+    <div class="Page" id="Brackets" id="BracketAdd">
+        <p class="AddButton"> + </p>
+    </div>
+
+    <div id="Popup" class="hidden">
+        <p><strong id="AddPrompt"></strong><input id="AddValue" type="text"></p>
+        <button id="AddCancel"> Cancel</button>
+        <button id="AddConfirm"> Ok </button>
+    </div>
+
+    <!--         Tournament Meat -->
+    <div class="Page" id="Tournament">
+       
+<!--       Timed Preliminaries  -->
+        <div id="Prelim">
+            <div id="PrelimBracket"></div>
+            <div class="TimeBar">
+                <div class="SetUp"><input id="WLSTime" type="number"> Minutes <button id="WLStart"> Start </button></div>
+                <div class="CountDown hidden">
+                    <div class="countDownBar"></div>
+                    <p class="countDownText"></p>
+                </div>
+            </div>
+        </div>
+<!--        Player Select     -->
+    <div id="Contestants" class="hidden">
+        
+        <div class="Contestantlist"></div>
+        
+        <div id="ContinueButton">
+            Players: 0
+        </div>
+    </div>
+    
+    <div id="TourneyProper" class="hidden">
+       <div id="Deck"></div>
+        
+        <div id="CurrentFight">
+            <button id="A">A victorious</button>
+            <button id="B">B victorious</button>
+        </div>
+    </div>
+    
+    <div id="Scores"></div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/Navigation.js"></script>
+    <script type="text/javascript" src="js/Lists.js"></script>
+    <script type="text/javascript" src="js/Tournament.js"></script>
+    <script type="text/javascript" src="js/NFC/Tap.js"></script>
+</body>
+</html>
